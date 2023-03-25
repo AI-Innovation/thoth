@@ -7,8 +7,8 @@ Thoth is a multishot system builder. It leverages a visual coding style interfac
 - Docker
 - Node.js 16 or higher
 - [xvfb](https://www.geeksforgeeks.org/how-to-install-xvfb-on-ubuntu/)
-- chromium
-- ffmpeg
+- [chromium](https://www.chromium.org/getting-involved/download-chromium/)
+- [ffmpeg](https://ffmpeg.org/download.html)
 
 We use Docker to run a local Postgres database. You can skip the docker and install postgres directly, but you are almost always better off just using Docker.
 For **Linux** and **MAC** users, **sleep** and **concurently** commands must be installed in the machine.
