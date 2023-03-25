@@ -2,12 +2,18 @@
 
 Thoth is a multishot system builder. It leverages a visual coding style interface to allows game designers and developers to rapidly create powerful natural language systems and prototype games.
 
-## Quickstart
+### Requirements
+- Yarn or npm
+- Docker
+- Node.js 16 or higher
+- [xvfb](https://www.geeksforgeeks.org/how-to-install-xvfb-on-ubuntu/)
+- chromium
+- ffmpeg
 
-You will need **yarn or npm** and **Docker** installed, along with **Node.js 16 or higher**. We use Docker to run a local Postgres database. You can skip the docker and install postgres directly, but you are almost always better off just using Docker.
+We use Docker to run a local Postgres database. You can skip the docker and install postgres directly, but you are almost always better off just using Docker.
 For **Linux** and **MAC** users, **sleep** and **concurently** commands must be installed in the machine.
 
-Install xvfb, chromium and ffmpeg
+## Install
 
 First, install dependencies
 
@@ -17,25 +23,27 @@ OR
 npm i
 ```
 
-You will need to make a few environment variable modifications
-To keep values privates, create a new file for each .env, called .env.local (these files are safe from the .gitignore)
+## Quickstart
 
 In order to run the client and server use
 
 ```
 yarn run dev
-
+OR
+npm run dev
+```
 If on Windows run:
+```
 yarn run dev:windows
 ```
 
 ### Local Development
 
-We use dotenv-flow for local environment variable management
+You will need to modify environment variables by copying .env and renaming it .env.local and then input your api keys. (these files are safe from the .gitignore)
 
-Go to client folder, and create a new file called .env.local -- copy and .env vars you want to set from .env there
+Go to client folder, and create a new file called .env.local -- copy any .env vars you want to set from .env there
 
-Go to server folder, and create a new file called .env.local -- copy and .env vars you want to set from .env there
+Go to server folder, and create a new file called .env.local -- copy any .env vars you want to set from .env there
 
 ## Client Setup
 
@@ -70,8 +78,3 @@ Builds the @thothai/thoth-client app for production to the `client/build` folder
 ### `yarn build:core`
 
 Builds the @thothai/core package for production to the `core/build` folder.
-
-## Apache license information
-
-Good example here for formatting apache license files for reference.
-https://www.openntf.org/Internal/home.nsf/dx/Applying_Apache_License
